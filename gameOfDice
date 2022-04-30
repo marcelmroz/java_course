@@ -1,0 +1,50 @@
+
+package kurs_udemy_1;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Kurs_udemy_1 {
+
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH); 
+      int userNum1 = scan.nextInt();
+      int userNum2 = scan.nextInt();
+      int userNum3 = scan.nextInt();
+      
+      int sumOfUserNum = userNum1 + userNum2 + userNum3;
+      
+      
+      
+      int firstRoll = rollDice();
+      int secondRoll = rollDice();
+      int thirdRoll = rollDice();
+      
+      //test poprawnosci rzutów kostką
+      System.out.println("firstRoll = " + firstRoll);
+      System.out.println("secondRoll = " + secondRoll);  
+      System.out.println("thirdRoll = " + thirdRoll);
+      
+      int sumOfDiceRolls = firstRoll + secondRoll + thirdRoll;
+      
+      System.out.println("sumOfUserNum = " + sumOfUserNum);
+      System.out.println("sumOfDiceRolls = " + sumOfDiceRolls);
+      
+      if(sumOfUserNum < sumOfDiceRolls){
+          System.out.println("You won!");
+      }
+      else {
+          System.out.println("You lost.");
+      }
+      
+    }
+    
+    public static int rollDice(){
+        double diceRoll = Math.random()*6;
+        return (int)diceRoll;
+    }
+    
+    
+    
+}
