@@ -1,0 +1,38 @@
+
+package kurs_udemy_1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Kurs_udemy_1 {
+
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH); 
+//        int temp = scan.nextInt();
+      
+        double[] prices = {
+        1.99,
+        5000,
+        4500,
+        8000,
+        1000   
+        };
+        double [] taxPrices = new double [5];
+       
+        System.out.println(Arrays.toString(prices));
+       
+        double temp = 0;
+        for(int i = 0; i < prices.length; i++){
+            temp = prices[i];
+            //taxPrices[i] = prices[i];
+            taxPrices[i] = temp + (0.13 * temp);
+        }
+        System.out.println(Arrays.toString(taxPrices));
+        
+
+    }
+    
+    
+}
