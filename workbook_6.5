@@ -1,6 +1,7 @@
 
 package kurs_udemy_1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Locale;
 
@@ -18,14 +19,16 @@ public class Kurs_udemy_1 {
         8000,
         1000   
         };
-        
+       
+        System.out.println(Arrays.toString(scores));
+       
         int temp = 0;
         for(int i = 0; i < scores.length; i++){
             if(temp < scores[i]){
                 temp = scores[i];
             }
         }
-        System.out.println("the highest score is: " + temp);
+        System.out.println("\nthe highest score is: " + temp);
         
 
     }
