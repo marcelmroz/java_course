@@ -1,0 +1,35 @@
+
+package kurs_udemy_1;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Kurs_udemy_1 {
+
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH); 
+        
+        String[] items = {
+        "tea",
+        "salt",
+        "pepper",
+        "rock",
+        "soup"   
+        };
+        
+        String cusItem = " ";
+        //salt wanted
+        while(!(cusItem.equals(items[1]))){
+            cusItem = scan.nextLine();
+            for(int i = 0; i < items.length; i++) {
+                if(cusItem.equals(items[1])){
+                    System.out.println("in line: " + i);
+                    break;
+                }    
+            }
+        }
+    }
+    
+    
+}
