@@ -1,0 +1,46 @@
+
+package kurs_udemy_1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Kurs_udemy_1 {
+
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in).useLocale(Locale.ENGLISH); 
+//        int temp = scan.nextInt();
+        //int[][] grades = new int [3][4];
+        int[][] grades = {
+            {1,2,3},
+            {4,5,6},
+            {7,8,9}
+        };
+        //System.out.println(Arrays.toString(grades[0]));
+        for(int i =0 ; i < grades.length;i++) {
+            
+            switch(i) {
+                case 0: {
+                    System.out.print("Pierwszy rząd: ");
+                    break;
+                }
+                case 1: {
+                    System.out.print("Drugi rząd: ");
+                    break;
+                }
+                case 2: {
+                    System.out.print("Trzeci rząd: ");
+                    break;
+                }
+            }
+            
+            for(int j =0;j < grades[i].length; j++) {
+                System.out.print(grades[i][j] + " ");
+            }
+            System.out.println("");
+        }
+        //System.out.println(grades[1][0]);
+    }
+    
+}
