@@ -1,0 +1,41 @@
+
+package test;
+
+
+public class Test {
+
+    public static void main(String[] args)
+    {
+        
+        
+        String one = "a";
+        String two = "b";
+        System.out.println(one.compareTo(two));
+
+        // create string array called names
+        String names[]
+            = { "Aahul", "Bjay", "Courav", "Diya" };
+        String temp;
+        for (int i = 0; i < names.length; i++) {
+            for (int j = i + 1; j < names.length; j++) {
+                
+                // to compare one string with other strings
+                if (names[i].compareTo(names[j]) > 0) { //if names[j] is later in alphabetical order than names[i] compareTo is smaller than 0
+                    // swapping
+                    temp = names[i];
+                    names[i] = names[j];
+                    names[j] = temp;
+                }
+            }
+        }
+
+        System.out.println(
+            "The names in alphabetical order are: ");
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
+    }
+    
+}
+
+
